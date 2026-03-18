@@ -3,7 +3,8 @@ import React from 'react'
 export const Home = () => {
   return (
     
-    s
+    "s"
 
   )
 }
+export default Home;
