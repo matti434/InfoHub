@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 import Button from '../../ui/button/Button';
+import './NavbarAuthButtons.css';
+
 const NavbarAuthButtons = () => {
     return (
         <>
-            <div className="d-flex gap-2">
+            <div className="navbar-auth-buttons d-flex gap-2 justify-content-center justify-content-lg-end">
                 <Button variant="outline-primary" href="/login">
                     Login
                 </Button>
