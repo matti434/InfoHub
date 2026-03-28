@@ -1,0 +1,20 @@
+.infohub-navbar .btn-outline-primary {
+    border-color: #7E55BB;
+    color: #7E55BB;
+  }
+  
+  .infohub-navbar .btn-outline-primary:hover {
+    background: #7E55BB;
+    border-color: #7E55BB;
+    color: #fff;
+  }
+  
+  .infohub-navbar .btn-primary {
+    background: #6540A3;
+    border-color: #6540A3;
+  }
+  
+  .infohub-navbar .btn-primary:hover {
+    background: #7E55BB;
+    border-color: #7E55BB;
+  }

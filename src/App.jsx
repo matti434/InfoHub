@@ -1,20 +1,22 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Menu } from "./Componentes/shared/Menu.jsx";
-import { Footer } from "./Componentes/shared/Footer.jsx";
-import { BrowserRouter,Routes,Route } from "react-router";
+import Home from "./pages/Home/Home.jsx";
+import { BrowserRouter, Routes, Route } from "react-router";
+import BootstrapNavbar from "./components/shared/Navbar/Navbar.jsx"
+
 function App() {
   return (
     <>
-     <BrowserRouter>
-        <Menu/>
+      <BrowserRouter>
+
         <main>
           <Routes>
-          <Route path="" element={<Home/>}></Route>
+            <Route path="" element={<BootstrapNavbar />}></Route>
+            <Route path="" element={<Home />}></Route>
           </Routes>
         </main>
-        <Footer />
-     </BrowserRouter>  
+
+      </BrowserRouter>
     </>
   );
 }

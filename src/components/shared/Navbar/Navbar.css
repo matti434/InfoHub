@@ -1,0 +1,148 @@
+/* Paleta InfoHub */
+:root {
+    --infohub-deep: #1B005C;
+    --infohub-rich: #341574;
+    --infohub-medium-dark: #4D2B8C;
+    --infohub-medium: #6540A3;
+    --infohub-light: #7E55BB;
+  }
+  
+  /* Navbar con fondo transparente */
+  .infohub-navbar {
+    background: rgba(27, 0, 92, 0.85) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(126, 85, 187, 0.3);
+    box-shadow: 0 4px 20px rgba(27, 0, 92, 0.3);
+  }
+  
+  .infohub-navbar .navbar-brand {
+    color: #7E55BB !important;
+    font-weight: 600;
+  }
+  
+  .infohub-navbar .navbar-brand:hover {
+    color: #fff !important;
+  }
+  
+  .infohub-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .infohub-navbar .nav-link:hover {
+    color: #7E55BB !important;
+  }
+  
+  .infohub-navbar .dropdown-toggle,
+  .infohub-navbar .nav-dropdown .dropdown-toggle {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+  
+  .infohub-navbar .dropdown-menu {
+    background: rgba(27, 0, 92, 0.95);
+    border: 1px solid rgba(126, 85, 187, 0.3);
+  }
+  
+  .infohub-navbar .dropdown-item {
+    color: #fff;
+  }
+  
+  .infohub-navbar .dropdown-item:hover {
+    background: rgba(77, 43, 140, 0.5);
+    color: #7E55BB;
+  }
+  
+  .infohub-navbar .navbar-toggler {
+    border-color: rgba(126, 85, 187, 0.5);
+  }
+  
+  .infohub-navbar .navbar-toggler-icon {
+    filter: invert(1);
+  }
+  
+  /* Buscador */
+  .infohub-navbar .form-control {
+    background: rgba(77, 43, 140, 0.4);
+    border-color: rgba(126, 85, 187, 0.4);
+    color: #fff;
+  }
+  
+  .infohub-navbar .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .infohub-navbar .form-control:focus {
+    background: rgba(77, 43, 140, 0.6);
+    border-color: #7E55BB;
+    color: #fff;
+  }
+  
+  /* Botón Search */
+  .infohub-navbar .btn-outline-success {
+    border-color: #7E55BB;
+    color: #7E55BB;
+  }
+  
+  .infohub-navbar .btn-outline-success:hover {
+    background: #7E55BB;
+    border-color: #7E55BB;
+    color: #fff;
+  }
+
+  /* Navbar collapse - alinear todo en la misma línea (desktop) */
+  @media (min-width: 992px) {
+    .infohub-navbar .navbar-collapse {
+      align-items: center;
+    }
+  }
+
+  /* Grupo botones + buscador - alineación en la misma línea */
+  .infohub-navbar .navbar-actions {
+    flex: 0 0 auto;
+  }
+
+  .infohub-navbar .navbar-actions .form-control,
+  .infohub-navbar .navbar-actions .btn {
+    height: 38px;
+  }
+
+  .infohub-navbar .navbar-actions .navbar-auth-buttons .btn {
+    height: 38px;
+    padding: 0.375rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 991.98px) {
+    .infohub-navbar .navbar-collapse {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    
+    .infohub-navbar .navbar-collapse .nav {
+      margin-bottom: 1rem;
+    }
+    
+    .infohub-navbar .navbar-collapse .nav-link {
+      padding: 0.5rem 0;
+    }
+    
+    /* Orden móvil: botones arriba, buscador abajo - centrados */
+    .infohub-navbar .navbar-actions {
+      width: 100%;
+      align-items: stretch;
+    }
+    
+    .infohub-navbar .navbar-actions .navbar-auth-buttons {
+      justify-content: center;
+    }
+    
+    .infohub-navbar .navbar-actions .form-control {
+      min-width: 0;
+    }
+    
+    .infohub-navbar .navbar-actions .d-flex.form-control {
+      flex: 1;
+    }
+  }
