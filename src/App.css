@@ -1,0 +1,27 @@
+:root {
+  --bg-0: #05000f;
+  --bg-1: #0b0320;
+  --bg-2: #15063a;
+  --accent-soft: rgba(126, 85, 187, 0.18);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #f3f0ff;
+  background:
+    radial-gradient(1200px 600px at 20% -10%, var(--accent-soft), transparent 60%),
+    radial-gradient(900px 500px at 90% 20%, rgba(101, 64, 163, 0.12), transparent 65%),
+    linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 45%, var(--bg-0) 100%);
+  background-attachment: fixed;
+}
+
+.app-layout,
+.app-main {
+  background: transparent;
+}
