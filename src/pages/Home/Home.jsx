@@ -9,9 +9,9 @@ export const Home = () => {
   return (
     <>
       <Hero />
-      <ApiLearningSection/>
-      <CardGrid />
       <SearchBar />
+      <CardGrid />
+      <ApiLearningSection/>
     </>
   );
 };
