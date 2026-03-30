@@ -1,5 +1,5 @@
 import "./CardItem.css";
-import SpotlightCard from "../../../components/SpotlightCard/SpotlightCard";
+import SpotlightCard from "../../../../components/SpotlightCard/SpotlightCard";
 import CardTitles from "./CardTitles";
 
 const CardItem = ({ title, description }) => {

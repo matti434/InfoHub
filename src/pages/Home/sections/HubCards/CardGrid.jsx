@@ -1,6 +1,6 @@
 import "./CardGrid.css";
 import CardItem from "./CardItem";
-import { homeHubCards } from "../Data/homeHubCards";
+import { homeHubCards } from "../../Data/homeHubCards";
 
 const CardGrid = () => {
   if (!homeHubCards.length) {
