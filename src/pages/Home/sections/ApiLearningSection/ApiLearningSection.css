@@ -1,0 +1,8 @@
+/* Misma tarjeta que CardItem; este archivo solo alinea la sección con el ancho del grid */
+.api-learning-section {
+  width: 100%;
+  max-width: var(--hub-card-max, 72rem);
+  margin-inline: auto;
+  padding: 2rem 1rem 2.5rem;
+  box-sizing: border-box;
+}
