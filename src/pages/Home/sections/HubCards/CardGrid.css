@@ -1,0 +1,30 @@
+/* Contenedor de sección: ancho de página coherente con el layout */
+.hub-card-section {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem 1rem 2.5rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.hub-card-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, var(--hub-card-min, 17.5rem)), 1fr)
+  );
+  gap: clamp(1rem, 3vw, 1.5rem);
+  width: 100%;
+  max-width: min(100%, var(--hub-card-max, 72rem));
+  margin-inline: auto;
+  align-items: stretch;
+}
+
+.hub-card-grid__cell {
+  min-width: 0;
+  display: flex;
+}
+
+.hub-card-grid__cell > * {
+  flex: 1;
+}

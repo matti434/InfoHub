@@ -1,0 +1,78 @@
+/* Misma tarjeta que CardItem; alinea la sección con el ancho del grid */
+.api-learning-section {
+  width: 100%;
+  max-width: min(100%, var(--hub-card-max, 72rem));
+  margin-inline: auto;
+  padding: 2rem 1rem 2.5rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.api-learning-carousel {
+  --bs-carousel-control-icon-width: 2.25rem;
+  --bs-carousel-indicator-width: 0.5rem;
+  --bs-carousel-indicator-height: 0.5rem;
+  --bs-carousel-indicator-spacer: 0.4rem;
+}
+
+.api-learning-carousel .carousel-inner {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+/* Un poco más de alto ayuda a que contain muestre bien la imagen completa */
+.api-learning-carousel__slide {
+  min-height: 16rem;
+  padding: 0.25rem 0.5rem 1.75rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .api-learning-carousel__slide {
+    min-height: 17rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+/* Indicadores más visibles sobre el morado */
+.api-learning-carousel .carousel-indicators [data-bs-target] {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.api-learning-carousel .carousel-indicators .active {
+  background-color: rgba(126, 85, 187, 0.95);
+}
+
+/* Flechas: contraste sobre el fondo */
+.api-learning-carousel .carousel-control-prev,
+.api-learning-carousel .carousel-control-next {
+  width: 12%;
+  opacity: 0.85;
+}
+
+.api-learning-carousel .carousel-control-prev:hover,
+.api-learning-carousel .carousel-control-next:hover {
+  opacity: 1;
+}
+
+/*
+  Dos capas: 1) degradado encima (legibilidad) 2) imagen debajo.
+  - Capa imagen con "contain": se ve el asset entero (efecto "alejar" vs cover).
+  - Tamaños por capa: el degradado cubre toda la card; la imagen hace contain.
+  - --slide-bg-position (opcional, desde apiLearningSlides) afecta solo el encuadre de la imagen.
+*/
+.custom-spotlight-card--slide-bg {
+  background-color: rgba(21, 6, 58, 0.95);
+  background-image:
+    linear-gradient(
+      145deg,
+      rgba(27, 0, 92, 0.78) 0%,
+      rgba(52, 21, 116, 0.85) 100%
+    ),
+    var(--slide-bg-image);
+  background-size: 100% 100%, contain;
+  background-position:
+    center,
+    var(--slide-bg-position, center center);
+  background-repeat: no-repeat;
+}

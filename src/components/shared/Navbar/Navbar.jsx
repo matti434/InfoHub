@@ -11,20 +11,20 @@ function Navbar() {
   return (
     <BootstrapNavbar expand="lg" className="infohub-navbar">
       <Container fluid>
-      <BootstrapNavbar.Brand href="#">Navbar scroll</BootstrapNavbar.Brand>
+      <BootstrapNavbar.Brand href="#">InfoHub</BootstrapNavbar.Brand>
       <BootstrapNavbar.Toggle aria-controls="navbarScroll" />
       <BootstrapNavbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0">
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Me</Nav.Link>
-            <NavDropdown title="Other projects" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Github 1</NavDropdown.Item>
+            <Nav.Link href="#action1">Inicio</Nav.Link>
+            <Nav.Link href="#action2">Mi perfil</Nav.Link>
+            <NavDropdown title="Otros proyectos" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Proyecto GitHub 1</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Github 2
+                Proyecto GitHub 2
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Github
+                GitHub
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
@@ -32,11 +32,11 @@ function Navbar() {
             <Form className="d-flex order-2 order-lg-1">
               <Form.Control
                 type="search"
-                placeholder="Search"
+                placeholder="Buscar"
                 className="me-2"
-                aria-label="Search"
+                aria-label="Buscar en el sitio"
               />
-              <Button variant="outline-success">Search</Button>
+              <Button variant="outline-success">Buscar</Button>
             </Form>
             <div className="order-1 order-lg-2">
               <NavbarAuthButtons />

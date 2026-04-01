@@ -7,7 +7,7 @@ const NavbarAuthButtons = () => {
         <>
             <div className="navbar-auth-buttons d-flex gap-2 justify-content-center justify-content-lg-end">
                 <Button variant="outline-primary" href="/login">
-                    Login
+                    Iniciar sesión
                 </Button>
                 <Button variant="primary" href="/register">
                     Registro
