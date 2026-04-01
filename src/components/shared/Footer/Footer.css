@@ -1,5 +1,13 @@
 .infohub-footer {
   background: linear-gradient(180deg, rgba(27, 0, 92, 0.85) 0%, #1b005c 100%);
+  padding-block: 1.75rem 2.25rem;
+  font-family: "Outfit", system-ui, sans-serif;
+}
+
+.infohub-footer__text {
+  font-size: clamp(0.95rem, 2.8vw, 1.0625rem);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
 }
 
 .footer-social-icons {
@@ -7,7 +15,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
+  padding-block: 0.25rem;
 }
 
 .footer-social-icons a {

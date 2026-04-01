@@ -14,7 +14,7 @@ const SearchBar = () => {
         className="api-search__input"
         value={query}
         onChange={handleChange}
-        placeholder="Buscar una API (titulo o descripcion)"
+        placeholder="Buscar una API (título o descripción)"
         aria-label="Buscar APIs"
       />
       <button className="api-search__button" type="submit">

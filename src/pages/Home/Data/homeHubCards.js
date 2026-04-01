@@ -5,17 +5,17 @@
 export const homeHubCards = [
   {
     id: "news-api",
-    title: "News API",
+    title: "API de noticias",
     description: "Agrega titulares y artículos desde fuentes configurables.",
   },
   {
     id: "weather-api",
-    title: "Weather API",
+    title: "API del clima",
     description: "Consulta condiciones actuales y pronóstico por ubicación.",
   },
   {
     id: "maps-api",
-    title: "Maps API",
+    title: "API de mapas",
     description: "Geocodificación y mapas embebidos para tu flujo de datos.",
   },
 ];
