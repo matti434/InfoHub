@@ -1,26 +1,42 @@
+import Carousel from "react-bootstrap/Carousel";
 import "../HubCards/CardItem.css";
 import "./ApiLearningSection.css";
 import SpotlightCard from "../../../../components/SpotlightCard/SpotlightCard";
 import CardTitles from "../HubCards/CardTitles";
+import { apiLearningSlides } from "../../Data/apiLearningSlides";
 
-const ApiLearningSection = ({
-  title = "Aprende sobre APIs",
-  description =
-    "Recursos y guías para entender APIs desde lo básico hasta conceptos avanzados.",
-}) => {
+function ApiLearningSection() {
   return (
     <section
       className="api-learning-section"
       aria-label="Aprendizaje de APIs"
     >
-      <SpotlightCard
-        className="custom-spotlight-card"
-        spotlightColor="rgba(0, 229, 255, 0.2)"
+      <Carousel
+        className="api-learning-carousel carousel-dark"
+        indicators
+        controls
+        interval={null}
+        wrap
+        touch
       >
-        <CardTitles title={title} description={description} />
-      </SpotlightCard>
+        {apiLearningSlides.map((slide) => (
+          <Carousel.Item key={slide.id}>
+            <div className="api-learning-carousel__slide">
+              <SpotlightCard
+                className="custom-spotlight-card"
+                spotlightColor="rgba(0, 229, 255, 0.2)"
+              >
+                <CardTitles
+                  title={slide.title}
+                  description={slide.description}
+                />
+              </SpotlightCard>
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel>
     </section>
   );
-};
+}
 
 export default ApiLearningSection;
