@@ -4,7 +4,7 @@ import "./SearchBar.css";
 const SearchBar = () => {
   const [query, setQuery] = useState("");
 
-  const handleChange = () => {
+  const handleChange = (e) => {
     setQuery(e.target.value);
   };
 

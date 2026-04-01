@@ -5,6 +5,16 @@
   --accent-soft: rgba(126, 85, 187, 0.18);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 html,
 body,
 #root {
@@ -13,6 +23,8 @@ body,
 
 body {
   margin: 0;
+  width: 100%;
+  overflow-x: hidden;
   color: #f3f0ff;
   background:
     radial-gradient(1200px 600px at 20% -10%, var(--accent-soft), transparent 60%),
@@ -21,7 +33,24 @@ body {
   background-attachment: fixed;
 }
 
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.app-layout {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .app-layout,
 .app-main {
   background: transparent;
+}
+
+.app-main {
+  width: 100%;
+  max-width: 100%;
 }
