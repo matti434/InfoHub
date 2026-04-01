@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <>
       <Hero />
-      <ApiLearningSection/>
+      <ApiLearningSection />
       <SearchBar />
     </>
   );
