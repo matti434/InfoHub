@@ -4,6 +4,7 @@ import "./SpotlightCard.css";
 const SpotlightCard = ({
   children,
   className = "",
+  style,
   spotlightColor = "rgba(255, 255, 255, 0.25)",
 }) => {
   const divRef = useRef(null);
@@ -23,6 +24,7 @@ const SpotlightCard = ({
       ref={divRef}
       onMouseMove={handleMouseMove}
       className={`card-spotlight ${className}`}
+      style={style}
     >
       {children}
     </div>

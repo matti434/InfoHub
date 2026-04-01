@@ -23,7 +23,20 @@ function ApiLearningSection() {
           <Carousel.Item key={slide.id}>
             <div className="api-learning-carousel__slide">
               <SpotlightCard
-                className="custom-spotlight-card"
+                className={
+                  "custom-spotlight-card" +
+                  (slide.image ? " custom-spotlight-card--slide-bg" : "")
+                }
+                style={
+                  slide.image
+                    ? {
+                        "--slide-bg-image": `url(${slide.image})`,
+                        ...(slide.bgPosition && {
+                          "--slide-bg-position": slide.bgPosition,
+                        }),
+                      }
+                    : undefined
+                }
                 spotlightColor="rgba(0, 229, 255, 0.2)"
               >
                 <CardTitles

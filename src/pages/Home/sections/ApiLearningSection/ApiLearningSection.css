@@ -20,15 +20,16 @@
   overflow: hidden;
 }
 
+/* Un poco más de alto ayuda a que contain muestre bien la imagen completa */
 .api-learning-carousel__slide {
-  min-height: 14rem;
+  min-height: 16rem;
   padding: 0.25rem 0.5rem 1.75rem;
   box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .api-learning-carousel__slide {
-    min-height: 15rem;
+    min-height: 17rem;
     padding-bottom: 1.5rem;
   }
 }
@@ -52,4 +53,26 @@
 .api-learning-carousel .carousel-control-prev:hover,
 .api-learning-carousel .carousel-control-next:hover {
   opacity: 1;
+}
+
+/*
+  Dos capas: 1) degradado encima (legibilidad) 2) imagen debajo.
+  - Capa imagen con "contain": se ve el asset entero (efecto "alejar" vs cover).
+  - Tamaños por capa: el degradado cubre toda la card; la imagen hace contain.
+  - --slide-bg-position (opcional, desde apiLearningSlides) afecta solo el encuadre de la imagen.
+*/
+.custom-spotlight-card--slide-bg {
+  background-color: rgba(21, 6, 58, 0.95);
+  background-image:
+    linear-gradient(
+      145deg,
+      rgba(27, 0, 92, 0.78) 0%,
+      rgba(52, 21, 116, 0.85) 100%
+    ),
+    var(--slide-bg-image);
+  background-size: 100% 100%, contain;
+  background-position:
+    center,
+    var(--slide-bg-position, center center);
+  background-repeat: no-repeat;
 }
