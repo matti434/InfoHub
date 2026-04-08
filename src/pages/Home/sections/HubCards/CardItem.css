@@ -21,3 +21,8 @@
   justify-content: center;
   min-height: 0;
 }
+
+.card-link{
+  text-decoration: none;
+  color: inherit;
+}

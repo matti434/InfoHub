@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home/Home.jsx";
 import { BrowserRouter, Routes, Route } from "react-router";
 import AppLayout from "./layouts/AppLayout.jsx";
+import WeatherPage from "./APIS/WeatherPage";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Home />} />
+          <Route path={"apis/clima"} element={ <WeatherPage/> } />
         </Route>
       </Routes>
     </BrowserRouter>

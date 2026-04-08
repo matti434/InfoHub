@@ -1,15 +1,18 @@
 import "./CardItem.css";
 import SpotlightCard from "../../../../components/SpotlightCard/SpotlightCard";
 import CardTitles from "./CardTitles";
+import { Link } from "react-router";
 
-const CardItem = ({ title, description }) => {
+const CardItem = ({ title, description,path }) => {
   return (
-    <SpotlightCard
-      className="custom-spotlight-card"
-      spotlightColor="rgba(0, 229, 255, 0.2)"
-    >
-      <CardTitles title={title} description={description} />
-    </SpotlightCard>
+    <Link to={path} className="card-link" >
+      <SpotlightCard
+        className="custom-spotlight-card"
+        spotlightColor="rgba(0, 229, 255, 0.2)"
+      >
+        <CardTitles title={title} description={description} />
+      </SpotlightCard>
+    </Link>
   );
 };
 

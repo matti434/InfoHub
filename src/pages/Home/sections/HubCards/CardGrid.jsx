@@ -12,7 +12,7 @@ const CardGrid = () => {
       <div className="hub-card-grid">
         {homeHubCards.map((card) => (
           <div className="hub-card-grid__cell" key={card.id}>
-            <CardItem title={card.title} description={card.description} />
+            <CardItem title={card.title} description={card.description}  path={card.path} />
           </div>
         ))}
       </div>
