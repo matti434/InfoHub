@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { fetchWeatherByCity } from "../api/weather";
+import WatherMap from "./WatherMap";
 
 const WeatherPage = () => {
   const [city, setCity] = useState("");
@@ -28,7 +29,7 @@ const WeatherPage = () => {
   }
 
   return (
-    <section className="container py-4">
+    <section className="container py-4 text-white">
       <h1>API del clima</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -43,13 +44,16 @@ const WeatherPage = () => {
       </form>
       {error && <p role="alert">{error}</p>}
       {data && (
-        <article>
-          <h2>{data.city}</h2>
-          {data.country && <p>{data.country}</p>}
-          <p>{data.tempC} °C</p>
-          <p>Sensación térmica: {data.feelsLikeC} °C</p>
-          <p>{data.description}</p>
-          {/* icon: podés armar URL del CDN de iconos OpenWeather si querés una imagen */}
+        <article className="p-5 col">
+          <div className="col-12">
+            <h2>{data.city}</h2>
+            {data.country && <p>{data.country}</p>}
+            <p>{data.tempC} °C</p>
+            <p>Sensación térmica: {data.feelsLikeC} °C</p>
+            <p>{data.description}</p>
+            {/* icon: podés armar URL del CDN de iconos OpenWeather si querés una imagen */}
+          </div>
+          <WatherMap lat={data.lat} lon={data.lon} city={data.city} />
         </article>
       )}
     </section>

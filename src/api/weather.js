@@ -1,7 +1,7 @@
 
 const BASE = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, "") || "http://localhost:3000";
 
-const WEATHER_PATH = "api/v1/weather";
+const WEATHER_PATH = "/api/v1/weather";
 
 function buildWeatherUrl({ q, lat, lon }) {
     const params = new URLSearchParams();
